@@ -40,7 +40,8 @@ let router = createBrowserRouter([{
   path: "/log", element: <LoginLayout />, children: [
     { index: true, element: <Login /> },
     { path: "login", element: <Login /> },
-    { path: "signup", element: <Signup /> }
+    { path: "signup", element: <Signup /> },
+    { path: "*", element: <NotFound /> }
   ]
 }
 ]);
