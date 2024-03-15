@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import Layout from "./component/layout/Layout";
 import LoginLayout from "./component/LogInlayOut/LogInlayOut";
 import Home from "./component/Home/Home";
@@ -19,7 +19,7 @@ import Signup from "./component/signup/Signup";
 import ProductUser from "./component/ProductUser/ProductUser";
 import { ToastContainer } from 'react-toastify';
 import Allorders from "./component/Allorders/Allorders";
-let router = createBrowserRouter([{
+let router = createHashRouter([{
   path: "/", element: <Layout />, children: [
     { index: true, element: <ProductUser><Home /></ProductUser> },
     { path: "home", element: <ProductUser><Home /></ProductUser> },
